@@ -1,4 +1,5 @@
 import { crearElementoImagen } from "../../helpers/crear-elemento-imagen"
+import { crearElementoParrafo } from "../../helpers/crear-elemento-parrafo"
 import { borrarPelicula, obtenerPeliculas } from "./pelicula-listado.api"
 import { CrearBotonesParams, Movie } from "./pelicula-listado.model"
 
@@ -29,11 +30,11 @@ const borraPelicula = async (id: string) => {
 //   return imagen
 // }
 
-const crearElementoParrafo = (texto: string): HTMLParagraphElement => {
-  const parrafo = document.createElement("p")
-  parrafo.textContent = texto
-  return parrafo
-}
+// const crearElementoParrafo = (texto: string): HTMLParagraphElement => {
+//   const parrafo = document.createElement("p")
+//   parrafo.textContent = texto
+//   return parrafo
+// }
 
 const crearBoton = (crearBotonParams: CrearBotonesParams): HTMLButtonElement => {
   const { texto, id: peliculaId, nombreClase, onClick } = crearBotonParams;
