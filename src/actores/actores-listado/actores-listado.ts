@@ -25,7 +25,7 @@ const crearContenedorActores = (actor: Actor): HTMLDivElement => {
   elementoActor.appendChild(biografia)
   const grupoBotones = crearGrupoBotones(id, editaActor, borraActor)
   elementoActor.appendChild(grupoBotones)
-  return elementoActor;
+  return elementoActor
 }
 
 export const pintarActores = async () => {
