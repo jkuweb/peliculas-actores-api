@@ -1,7 +1,8 @@
+import { crearElementoBoton } from "../../helpers/crear-elemento-boton"
 import { crearElementoImagen } from "../../helpers/crear-elemento-imagen"
 import { crearElementoParrafo } from "../../helpers/crear-elemento-parrafo"
 import { borrarPelicula, obtenerPeliculas } from "./pelicula-listado.api"
-import { CrearBotonesParams, Movie } from "./pelicula-listado.model"
+import { Movie } from "./pelicula-listado.model"
 
 const editaPelicula = (id: string) => {
   window.location.href = `../pelicula-editar/index.html?id=${encodeURIComponent(id)}`
@@ -36,29 +37,29 @@ const borraPelicula = async (id: string) => {
 //   return parrafo
 // }
 
-const crearBoton = (crearBotonParams: CrearBotonesParams): HTMLButtonElement => {
-  const { texto, id: peliculaId, nombreClase, onClick } = crearBotonParams;
-  const boton = document.createElement("button")
-  boton.textContent = texto
-  boton.addEventListener("click", () => {
-    onClick(peliculaId)
-  })
-  boton.classList.add(nombreClase)
-  return boton
-}
+// const crearElementoBoton = (crearBotonParams: CrearBotonesParams): HTMLButtonElement => {
+//   const { texto, id: peliculaId, nombreClase, onClick } = crearBotonParams;
+//   const boton = document.createElement("button")
+//   boton.textContent = texto
+//   boton.addEventListener("click", () => {
+//     onClick(peliculaId)
+//   })
+//   boton.classList.add(nombreClase)
+//   return boton
+// }
 
 const crearGrupoBotones = (id: string): HTMLDivElement => {
   const grupoBotones = document.createElement("div")
   grupoBotones.classList.add("grupo-botones")
 
-  const botonEditar = crearBoton({
+  const botonEditar = crearElementoBoton({
     texto: "editar",
     id: id,
     nombreClase: "boton-editar",
     onClick: () => editaPelicula(id)
   })
 
-  const botonBorrar = crearBoton({
+  const botonBorrar = crearElementoBoton({
     texto: "borrar",
     id: id,
     nombreClase: "boton-borrar",
