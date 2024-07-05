@@ -63,7 +63,7 @@ button:hover {
   overflow-y: scroll;
   position: relative;
 }
-.pelicula-contenedor {
+.container {
   display: grid;
   grid-template-columns: 5% repeat(4, 1fr);
   grid-gap: 10px;
@@ -72,7 +72,7 @@ button:hover {
   border: 1px solid #dee2e6;
   padding: 10px;
 }
-.pelicula-contenedor img {
+.container img {
   max-width: 60px;
 }
 .grupo-botones {
@@ -103,15 +103,15 @@ button:hover {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  .pelicula-contenedor {
+  .container {
     grid-template-columns: auto;
     justify-content: center;
     padding: 20px;
   }
-  .pelicula-contenedor img {
+  .container img {
     max-width: 300px;
   }
-  .pelicula-contenedor p {
+  .container p {
     text-align: center;
   }
 }

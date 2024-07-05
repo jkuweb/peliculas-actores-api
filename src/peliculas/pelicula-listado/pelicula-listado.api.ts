@@ -5,6 +5,7 @@ import { Movie } from "./pelicula-listado.model"
 export const obtenerPeliculas = async (): Promise<Movie[]> => {
   try {
     const { data } = await Axios.get("http://localhost:3000/movies")
+    console.log(data)
     return data
   } catch (error) {
     throw new Error("error al obtener las peliculas")

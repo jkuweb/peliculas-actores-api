@@ -3,5 +3,5 @@ export interface Actor {
   name: string;
   bio: string;
   movies: string[];
-  cover_url: string;
+  image: string;
 }
